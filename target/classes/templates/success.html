@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset=utf-8 />
+<title>success</title>
+
+</head>
+<body>
+<table>
+<div><a href="/index/toAdd">添加用户</a></div>
+
+<tr th:each="stu:${list}">
+<td th:text="${stuStat.count}"></td>
+<td th:text="${stu.name}"></td>
+<td th:text="${stu.age}"></td>
+<td th:text="${stu.score}"></td>
+
+<td>
+<a th:href="@{/index/update(id=${stu.id})}">修改</a>
+<a th:href="@{/index/delete(id=${stu.id})}">删除</a>
+
+</td>
+<td ></td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
